@@ -1,0 +1,90 @@
+<center><b><u><h3>{{viewTitle}}</h3></u></b></center>
+<br><br><br><br>
+
+<form action="/studentFilter" method="POST" autocomplete="off">
+
+
+<div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Student Category:</label><span style="color: red !important; display: inline; float: none;">*</span><br>
+            <select name="stdType">
+                <option value="FULL TIME">FULL TIME</option>
+                <option value="SPONSORED">SPONSORED</option>
+                <option value="PROJECT FELLOW">PROJECT FELLOW</option>
+                <option value="PART TIME">PART TIME</option>
+            </select>
+    </div>
+  
+  
+
+    <div class="col-md-6 mb-3">
+        <label>CURRENT SEMESTER:</label><span style="color: red !important; display: inline; float: none;">*</span><br>
+            <select name="sem">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            </select>
+    </div>
+
+</div>
+
+
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        
+    </div>
+
+</form>
+<br><br>
+
+
+<form action="/studentFilterType" method="POST" autocomplete="off">
+
+
+<div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Student Category:</label><span style="color: red !important; display: inline; float: none;">*</span><br>
+            <select name="stdType">
+                <option value="FULL TIME">FULL TIME</option>
+                <option value="SPONSORED">SPONSORED</option>
+                <option value="PROJECT FELLOW">PROJECT FELLOW</option>
+                <option value="PART TIME">PART TIME</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</div>
+
+</form>
+<br><br>
+
+
+
+
+<form action="/studentFilterSem" method="POST" autocomplete="off">
+
+
+<div class="form-row">
+    <div class="col-md-6 mb-3">
+       <label>CURRENT SEMESTER:</label><span style="color: red !important; display: inline; float: none;">*</span><br>
+            <select name="sem">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</div>
+
+
+</form>

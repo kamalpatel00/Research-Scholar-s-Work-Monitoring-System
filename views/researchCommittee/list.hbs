@@ -1,0 +1,30 @@
+<h3><a class="btn btn-secondary" href="/researchCommittee"><i class="fa fa-plus"></i></a><center><b><u>Research Committee Member</u></b></center></h3>
+<br><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Teacher ID</th>
+            <th>School </th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.teacherId}}</td>
+            <td>{{this.school}}</td>
+            <td>{{this.department}}</td>
+            <td>{{this.deg}}</td>
+
+            <td>
+                <a href="/researchCommittee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i><b></b> &nbsp;&nbsp;</a>
+                <a href="/researchCommittee/delete/{{this._id}}" onclick="return confirm('Are you want to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i><b></b></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>

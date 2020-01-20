@@ -1,0 +1,25 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/school" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{school._id}}">
+    <div class="form-group">
+        <label>School ID:</label>
+        <input type="text" class="form-control" name = "schoolId" placeholder="School ID" value="{{school.schoolId}}">
+        <div class="text-danger">
+            {{school.schoolIdError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>School Name:</label>
+        <input type="text" class="form-control" name = "schoolName" placeholder="School Name" value="{{school.schoolName}}">
+        <div class="text-danger">
+            {{school.schoolNameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/school/list"><i class="fa fa-list-alt"></i>View All</a>
+    </div>
+
+</form>

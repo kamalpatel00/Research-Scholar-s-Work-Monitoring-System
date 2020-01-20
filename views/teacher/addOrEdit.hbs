@@ -1,0 +1,180 @@
+<h3><u>{{viewTitle}}</u></h3>
+
+<form action="/teacher" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{teacher.id}}">
+
+<div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Teacher ID:</label>
+        <input type="text" required  class="form-control" name = "teacherId" placeholder="Teacher ID" value="{{teacher.teacherId}}" >
+        <div class="text-danger">
+          {{teacher.teacherIdError}}
+        </div>
+      </div>
+  
+    <div class="col-md-6 mb-3">
+      <label>First Name:</label>
+        <input type="text" class="form-control" name = "teacherFirstName" placeholder="First Name" value="{{teacher.teacherFirstName}}">
+        <div class="text-danger">
+          {{teacher.teacherFirstNameError}}
+        </div>
+      </div>
+    </div>
+
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Last Name:</label>
+        <input type="text" class="form-control" name = "teacherLastName" placeholder="Last Name" value="{{teacher.teacherLastName}}">
+        <div class="text-danger">
+          {{teacher.teacherLastNameError}}
+        </div>
+      </div>
+  
+    <div class="col-md-6 mb-3">
+      <label>DOB:</label>
+        <input type="date" class="form-control" name = "teacherDob" placeholder="" value="{{teacher.teacherDob}}">
+        <div class="text-danger">
+          {{teacher.teacherDobError}}
+        </div>
+      </div>
+    </div>
+    
+      
+<div class="form-row">
+    <div class="col-md-6 mb-3">
+      <legend>Choose your gender:</legend>
+        
+        <label for="male">Male</label>
+        <input type="radio" name="teacherGender" id="male" value="male"  value="{{teacher.teacherGender}}">
+        
+        <label for="female">Female</label>
+        <input type="radio" name="teacherGender" id="female" value="female" value="{{teacher.teacherGender}}">
+        
+
+        
+        
+        
+        <div class="text-danger">
+          {{teacher.teacherGenderError}}
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>Address :</label>
+        <textarea rows="3" cols="30" class="form-control" name = "teacherAddress"  placeholder="{{teacher.teacherAddress}}" value="{{teacher.teacherAddress}}"></textarea>
+        <div class="text-danger">
+          {{teacher.teacherAddressError}}
+        </div>
+      </div>
+    </div>
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Mobile :</label>
+          <input type="text" id="UserMobile" minlength="10" maxlength="10" data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN"  placeholder="Mobile No. " class="form-control" name="teacherMobile" data-fv-field="data[User][mobile]" value="{{teacher.teacherMobile}}">
+          <div class="text-danger">
+          {{teacher.teacherMobileError}}
+        </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label>Email:</label>
+        <input type="email" class="form-control" name = "teacherEmail" placeholder="Email" value="{{teacher.teacherEmail}}">
+        <div class="text-danger">
+          {{teacher.teacherEmailError}}
+        </div>
+      </div>
+    </div>
+
+<div class="form-row">
+<div class="col-md-6 mb-3">
+   <label>School:</label>
+
+
+
+<select class="form-control" name = "teacherSchool">
+
+
+        {{#each list}}
+         
+             <option value="{{this.schoolName}}">{{this.schoolName}}</option>
+
+         {{/each}}
+
+
+
+</select>
+        
+       <!-- 
+         
+         
+        <input type="text" class="form-control" name = "teacherSchool" placeholder="School" value="{{teacher.teacherSchool}}">
+        
+         <div class="text-danger">
+          {{teacher.teacherSchoolError}}
+        </div>  -->
+
+
+
+    </div>
+  
+    <div class="col-md-6 mb-3">
+      <label>Department:</label>
+
+        
+<select class="form-control" name = "teacherDepartment">
+
+
+        {{#each list}}
+         
+             <option value="{{this.departmentName}}">{{this.departmentName}}</option>
+
+         {{/each}}
+
+
+
+</select>
+
+        {{!-- <input type="text" class="form-control" name = "teacherDepartment" placeholder="Department" value="{{teacher.teacherDepartment}}"> --}}
+        <div class="text-danger">
+          {{teacher.teacherDepartmentError}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Qualification:</label>
+        <input type="text" class="form-control" name = "teacherQualification" placeholder="Qualification" value="{{teacher.teacherQualification}}">
+        <div class="text-danger">
+          {{teacher.teacherQualificationError}}
+        </div>
+      </div>
+  
+    <div class="col-md-6 mb-3">
+      <label>Specialization:</label>
+        <input type="text" class="form-control" name = "teacherSpecialization" placeholder="Specialization" value="{{teacher.teacherSpecialization}}">
+        <div class="text-danger">
+          {{teacher.teacherSpecializationError}}
+        </div>
+      </div>
+      </div>
+
+    <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label>Designation :</label>
+        <input type="text" class="form-control" name = "teacherDesignation" placeholder="Designation" value="{{teacher.teacherDesignation}}">
+        <div class="text-danger">
+          {{teacher.teacherDesignationError}}
+        </div>
+      </div>
+        
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/teacher/list"><i class="fa fa-list-alt"></i>View All</a>
+        
+    </div>
+    
+
+</form>

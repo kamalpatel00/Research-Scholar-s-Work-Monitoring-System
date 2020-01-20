@@ -1,0 +1,69 @@
+<center><h3>Student List</h3></center>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Regitration No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Martial Status</th>
+            <th>Father’s/Husband’s</th>
+            <th>Mobile No</th>
+            <th>Email</th>
+            <th>Address Parmanent</th>
+            <th>Local Address</th>
+            <th>Local Guardian (Mentor)</th>
+            <th>School</th>
+            <th>Department</th>
+            <th>Student Category</th>
+            <th>TOTAL SEMESTER</th>
+            <th>CURRENT SEMESTER</th>
+            <th>Privious Education</th>
+            <th>Course</th>
+            <th>Percentage</th>
+            <th>Others</th>
+            <th>Percentage</th>
+            <th>COUNTRY</th>
+            <th>Nationality</th>
+            <th>Passport</th>
+            <th>Contact No of Embassy</th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.registrationNumber}}</td>
+            <td>{{this.studentFirstName}}</td>
+            <td>{{this.studentLastName}}</td>
+            <td>{{this.studentDob}}</td>
+            <td>{{this.studentGender}}</td>
+            <td>{{this.studentMartialStatus}}</td>
+            <td>{{this.studentFatherHusbandName}}</td>
+            <td>{{this.studentMobile}}</td>
+            <td>{{this.studentEmail}}</td>
+            <td>{{this.studentParamanentAddress}}</td>
+            <td>{{this.studentLocalAddress}}</td>
+            <td>{{this.studentMentorName}}</td>
+            <td>{{this.studentSchool}}</td>
+            <td>{{this.studentDepartment}}</td>
+            <td>{{this.studentCategory}}</td>
+            <td>{{this.studentTotalSemester}}</td>
+            <td>{{this.studentCurrentSemester}}</td>
+            <td>{{this.studentLastEducation}}</td>
+            <td>{{this.studentCourse}}</td>
+            <td>{{this.studentLastPercentage}}</td>
+            <td>{{this.studentOther}}</td>
+            <td>{{this.studentOtherPercentage}}</td>
+            <td>{{this.studentCountry}}</td>
+            <td>{{this.studentNationality}}</td>
+            <td>{{this.studentPassport}}</td>
+            <td>{{this.studentHCIContact}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>

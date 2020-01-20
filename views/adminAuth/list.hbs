@@ -1,0 +1,25 @@
+<h3><a class="btn btn-secondary" href="/adminAuth"><i class="fa fa-plus"></i></a>Admin Login Detail List</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ADMIN LOGIN ID</th>
+            <th>PASSWORD </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.loginId}}</td>
+            <td>{{this.password}}</td>
+        
+            <td>
+                <a href="/adminAuth/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i><b>Update</b> &nbsp;&nbsp;</a>
+                <a href="/adminAuth/delete/{{this._id}}" onclick="return confirm('Are you want to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i><b>Trash</b></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table> 

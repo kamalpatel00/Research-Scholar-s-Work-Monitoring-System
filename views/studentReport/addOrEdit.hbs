@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <center><b><u><h4>STUDENT PANNEL</h4></u></b></center>
+
+  
+<nav class="navbar navbar-light bg-light" id="na">
+  <form action="/studentHome" class="form-inline" method="POST" >
+ <div class="form-group">
+    
+        {{!-- <a class="btn btn-secondary" href="../studentHome/list"><i class="fa fa-list-alt"></i>Student LIst</a> --}}
+                
+    
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+      <br><br>
+      <label><b>YOUR SUPERVISIORS:&nbsp;</b></label>
+    <input class="form-control mr-sm-2" type="search" name="studentSearch" placeholder="CSM17029" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <br>
+</div>
+ 
+
+  </form>
+</nav>
+
+    <br><br>
+    
+<form action="/studentReport" method="POST" autocomplete="off" enctype='multipart/form-data'>
+
+    <div class="form-group">
+        <label><b>Report:</b></label><br>
+         <input type="file" id="file" name="file" name="myFile">
+        
+    </div>
+    <br><br>
+    <div class="form-group">
+        <button type="submit" onclick="upload();" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+    </div>
+
+</form>
+
+
+        {{!-- <button href="/download" onclick="download();">Download</button> --}}
+
+    
+<script>
+  function download(){
+    window.location.href = "http://localhost:3000/download?" + "file=application.docx"
+  }
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+<h3>{{viewTitle}}</h3>

@@ -1,0 +1,165 @@
+<center><b><h3><u>{{viewTitle}}</u></h3></b></center>
+<br><br>
+
+
+
+<form action="/studentSupervisior" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{studentSupervisior._id}}">
+
+ <div class="form-group">
+        <label>Student Registration N.:</label>
+         <select class="form-control" name = "studentReg">
+
+
+        {{#each list}}
+         
+             <option value="{{this.registrationNumber}}">{{this.registrationNumber}}</option>
+
+         {{/each}}
+
+
+
+</select>
+        
+        
+    </div>
+
+
+  
+<div class="form-row">
+        <div class="col-md-6 mb-3">
+         <label>Super Visior 1:</label>
+        <select class="form-control" name = "sv1">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+
+
+
+</select>
+        
+    </div>
+
+    <div class="col-md-6 mb-3">
+         <label>Super Visior 2:</label>
+        <select class="form-control" name = "sv2">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+        
+        </select>
+        </div>
+</div>
+
+<div class="form-row">
+        <div class="col-md-6 mb-3">
+         <label>Super Visior 3:</label>
+         <select class="form-control" name = "sv3">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+         </select>
+
+        
+    </div>
+
+    <div class="col-md-6 mb-3">
+         <label>Super Visior 4:</label>
+         <select class="form-control" name = "sv4">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+         </select>
+        
+    </div>
+</div>
+
+
+<div class="form-row">
+        <div class="col-md-6 mb-3">
+         <label>Super Visior 5:</label>
+         <select class="form-control" name = "sv5">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+         </select>
+        
+    </div>
+
+    <div class="col-md-6 mb-3">
+         <label>Super Visior 6:</label>
+         <select class="form-control" name = "sv6">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+         </select>
+        
+    </div>
+</div>
+
+<div class="form-row">
+        <div class="col-md-6 mb-3">
+         <label>Super Visior 7:</label>
+         <select class="form-control" name = "sv7">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+         </select>
+        
+    </div>
+
+    <div class="col-md-6 mb-3">
+         <label>Super Visior 8:</label>
+         <select class="form-control" name = "sv8">
+
+
+        {{#each list1}}
+         
+             <option value="{{this.teacherFirstName}}">{{this.teacherFirstName}}</option>
+
+         {{/each}}
+         </select>
+        
+    </div>
+</div>
+
+
+<br><br>
+
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/studentSupervisior/list"><i class="fa fa-list-alt"></i>View All</a>
+        
+    </div>
+
+</form>

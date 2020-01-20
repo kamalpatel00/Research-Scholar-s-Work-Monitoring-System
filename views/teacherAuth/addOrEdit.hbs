@@ -1,0 +1,50 @@
+<center><u><h3>{{viewTitle}}</h3></u></center>
+
+<form action="/teacherAuth" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{teacherAuth._id}}">
+
+        <div class="form-group">
+        <label>TEACHER ID:</label>
+        <input type="search" class="form-control" name = "teacherId" placeholder="CSM19029" value="{{teacherAuth.teacherId}}" >
+        <div class="text-danger">
+            {{teacherAuth.teacherIdError}}
+        </div>
+    </div>
+        {{!-- <select class="form-control" name = "studentRegistrationNumber">
+
+
+        {{#each list}}
+         
+             <option value="{{this.registrationNumber}}">{{this.registrationNumber}}</option>
+
+         {{/each}}
+
+
+
+</select> --}}
+    
+    <div class="form-group">
+        <label>ID:</label>
+        <input type="text" class="form-control" name = "teacherLoginID" placeholder="ID" value="{{teacherAuth.teacherLoginID}}">
+        <div class="text-danger">
+            {{teacherAuth.teacherLoginIDError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+       
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" name = "teacherPassword" placeholder="ID" value="{{teacherAuth.teacherPassword}}">
+        <div class="text-danger">
+            {{teacherAuth.teacherPasswordError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Save</button>
+          <a class="btn btn-secondary" href="/teacherAuth/list"><i class="fa fa-list-alt"></i>Login Details</a>
+    
+    </div>
+
+</form>

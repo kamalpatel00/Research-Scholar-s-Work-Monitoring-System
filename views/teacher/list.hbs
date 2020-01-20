@@ -1,0 +1,45 @@
+<h3><a class="btn btn-secondary" href="/teacher"><i class="fa fa-plus"></i>Add New</a> list</h3>
+ <table class="table table-striped">
+     <thead>
+         <tr>
+             <th>Teacher ID</th>
+             <th>Teacher First Name</th>
+             <th>Teacher Last Name</th>
+             <th>DOB</th>
+             <th>Gender</th>
+             <th>Address</th>
+             <th>Mobile</th>
+             <th>Email</th>
+             <th>School</th>
+             <th>Department</th>
+             <th>Qualification</th>
+             <th>Specialization</th>
+             <th>Designation</th>
+             <th></th>
+         </tr>
+     </thead>
+
+     <tbody>
+         {{#each list}}
+         <tr>
+             <td>{{this.teacherId}}</td>
+             <td>{{this.teacherFirstName}}</td>
+             <td>{{this.teacherLastName}}</td>
+             <td>{{this.teacherDob}}</td>
+             <td>{{this.teacherGender}}</td>
+             <td>{{this.teacherAddress}}</td>
+             <td>{{this.teacherMobile}}</td>
+             <td>{{this.teacherEmail}}</td>
+             <td>{{this.teacherSchool}}</td>
+             <td>{{this.teacherDepartment}}</td>
+             <td>{{this.teacherQualification}}</td>
+             <td>{{this.teacherSpecialization}}</td>
+             <td>{{this.teacherDesignation}}</td>
+             <td>
+                 <a href="/teacher/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                 <a href="/teacher/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+             </td>
+         </tr>
+         {{/each}}
+     </tbody>
+ </table>

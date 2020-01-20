@@ -1,0 +1,50 @@
+<center><u><h3>{{viewTitle}}</h3></u></center>
+
+<form action="/studentAuth" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{studentAuth._id}}">
+
+        <div class="form-group">
+        <label>REGISTRATION No:</label>
+        <input type="search" class="form-control" name = "studentRegistrationNumber" placeholder="CSM19029" value="{{studentAuth.studentRegistrationNumber}}" >
+        <div class="text-danger">
+            {{studentAuth.studentRegistrationNumberError}}
+        </div>
+    </div>
+        {{!-- <select class="form-control" name = "studentRegistrationNumber">
+
+
+        {{#each list}}
+         
+             <option value="{{this.registrationNumber}}">{{this.registrationNumber}}</option>
+
+         {{/each}}
+
+
+
+</select> --}}
+    
+    <div class="form-group">
+        <label>ID:</label>
+        <input type="text" class="form-control" name = "studentId" placeholder="ID" value="{{studentAuth.studentId}}">
+        <div class="text-danger">
+            {{studentAuth.studentIdError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+       
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" name = "studentPassword" placeholder="ID" value="{{studentAuth.studentPassword}}">
+        <div class="text-danger">
+            {{studentAuth.studentPasswordError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Save</button>
+          <a class="btn btn-secondary" href="/studentAuth/list"><i class="fa fa-list-alt"></i>Login Details</a>
+    
+    </div>
+
+</form>

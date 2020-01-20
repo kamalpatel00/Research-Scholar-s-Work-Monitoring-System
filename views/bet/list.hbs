@@ -1,0 +1,32 @@
+<h3><a class="btn btn-secondary" href="/bet"><i class="fa fa-plus"></i></a><center><b><u>CRC/DRC Member</u></b></center></h3>
+<br><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Teacher ID</th>
+            <th>School </th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>College/University</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.teacherId}}</td>
+            <td>{{this.school}}</td>
+            <td>{{this.department}}</td>
+            <td>{{this.deg}}</td>
+            <td>{{this.university}}</td>
+
+            <td>
+                <a href="/bet/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i><b></b> &nbsp;&nbsp;</a>
+                <a href="/bet/delete/{{this._id}}" onclick="return confirm('Are you want to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i><b></b></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>

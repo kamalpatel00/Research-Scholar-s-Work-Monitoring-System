@@ -1,0 +1,31 @@
+<center><u><h3>{{viewTitle}}</h3></u></center>
+
+<form action="/adminAuth" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{adminAuth._id}}">
+
+    
+    <div class="form-group">
+        <label>Login ID:</label>
+        <input type="text" class="form-control" name = "loginId" placeholder="ID" value="{{adminAuth.loginId}}">
+        <div class="text-danger">
+            {{adminAuth.loginIdError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+       
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" name = "password" placeholder="ID" value="{{adminAuth.password}}">
+        <div class="text-danger">
+            {{adminAuth.passwordError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Save</button>
+          <a class="btn btn-secondary" href="/adminAuth/list"><i class="fa fa-list-alt"></i>Login Details</a>
+    
+    </div>
+
+</form>

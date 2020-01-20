@@ -1,0 +1,80 @@
+<center><u><b><h3>{{viewTitle}}</h3></b></u></center>
+<br><br><br>
+<form action="/bet" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{bet._id}}">
+    
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+        <label>Teacher ID:</label><span style="color: red ; display: inline; float: none;">*</span>
+
+           <select class="form-control" name = "teacherId">
+                {{#each list1}}
+                      <option value="{{this.teacherId}}">{{this.teacherId}}</option>
+                 {{/each}}
+            </select>
+
+        {{!-- <input type="text" class="form-control" name = "teacherId" placeholder="School ID" value="{{bet.teacherId}}">
+        <div class="text-danger">
+            {{bet.teacherIdError}}
+        </div> --}}
+    </div>
+
+    <div class="col-md-6 mb-3">
+    <label>School:</label><span style="color: red ; display: inline; float: none;">*</span>
+
+        <select class="form-control" name = "school">
+                {{#each list}}
+                      <option value="{{this.schoolName}}">{{this.schoolName}}</option>
+                 {{/each}}
+            </select>
+        {{!-- <input type="text" class="form-control" name = "school" placeholder="School Name" value="{{bet.school}}">
+        <div class="text-danger">
+            {{bet.schoolError}}
+        </div> --}}
+    </div>
+ </div>
+
+    
+    
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+        <label>Department:</label><span style="color: red ; display: inline; float: none;">*</span>
+        <select class="form-control" name = "department">
+                {{#each list}}
+                      <option value="{{this.departmentName}}">{{this.departmentName}}</option>
+                 {{/each}}
+            </select>
+    </div>
+
+        <div class="col-md-6 mb-3">
+        <label>Degignation:</label><span style="color: red ; display: inline; float: none;">*</span>
+
+             <select class="form-control" name = "deg">
+                
+                      <option value="PROFESSOR">PROFESSOR</option>
+                      <option value="ASSISTANT PROFESSOR">ASSISTANT PROFESSOR</option>
+                      <option value="ASSISTANT PROFESSOR">ASSOCIATE PROFESSOR</option>
+                
+            </select>        
+        {{!-- <input type="text" class="form-control" name = "deg" placeholder="Department Name" value="{{bet.deg}}">
+        <div class="text-danger">
+            {{bet.degError}}
+        </div> --}}
+        </div>
+    </div
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+        <label>College/University:</label><span style="color: red ; display: inline; float: none;">Case of External Member</span>
+        <input type="text" class="form-control" name = "university" placeholder="External Teacher" value="{{bet.university}}">
+    </div>
+
+
+    <div class="form-group pull-right">
+        <button type="submit" class="btn btn-info" class="float-right"><i class="fa fa-database"></i>Submit</button>
+        <a class="btn btn-secondary" href="/bet/list"><i class="fa fa-list-alt"></i>View All</a>
+    </div>
+    <br><br>
+
+</form>
